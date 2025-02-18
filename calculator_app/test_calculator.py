@@ -7,11 +7,11 @@ def test_add(a, b, expected):
 @pytest.mark.parametrize("a, b,expected",[
     (
     (2, 3, 5),  # Positive integers
-        (-1, 1, 0),  # Negative and positive integers
-        (0.5, 0.5, 1.0),  # Floating-point numbers
-        (0, 0, 0),  # Zeroes
-        (100, 200, 300), # Larger numbers
-        (-5, -5, -10) # Both negative
+    (-1, 1, 0),  # Negative and positive integers
+    (0.5, 0.5, 1.0),  # Floating-point numbers
+    (0, 0, 0),  # Zeroes
+    (100, 200, 300), # Larger numbers
+    (-5, -5, -10) # Both negative
     ),
 ])
 
