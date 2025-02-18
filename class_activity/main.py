@@ -7,16 +7,16 @@ def subtract(a, b):
 def multiply(a, b):
     return a * b
 
-def factorial(n):
+def factorial(n): # Example: 5! = 5 * 4 * 3 * 2 * 1 = 120
     if n == 0 or n == 1:
         return 1
     else:
         return n * factorial(n - 1)
 
-def is_prime(n):
+def is_prime(n): # whole number that can only be divided evenly by 1 and itself.
     if n <= 1:
         return False
-    for i in range(2, int(n ** 0.5) + 1):
+    for i in range(2, int(n ** 0.5) + 1): # range(start, stop, step) # e.g. 16, range(2, 5) = 2, 3, 4
         if n % i == 0:
             return False
     return True

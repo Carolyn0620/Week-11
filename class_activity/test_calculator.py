@@ -1,10 +1,19 @@
 import pytest
 from main import add, subtract, multiply, factorial, is_prime, power
 
-def test_add():
-    assert add(2, 3) == 5
-    assert add(-1, 1) == 0
-    assert add(0.5, 0.5) == 1.0
+def test_add(a, b, expected):
+    assert add(a, b) == expected
+
+@pytest.mark.parametrize("a, b,expected",[
+    (
+    (2, 3, 5),  # Positive integers
+        (-1, 1, 0),  # Negative and positive integers
+        (0.5, 0.5, 1.0),  # Floating-point numbers
+        (0, 0, 0),  # Zeroes
+        (100, 200, 300), # Larger numbers
+        (-5, -5, -10) # Both negative
+    ),
+])
 
 def test_subtract():
     assert subtract(5, 2) == 3
